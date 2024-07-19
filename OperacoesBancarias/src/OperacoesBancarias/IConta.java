@@ -1,3 +1,5 @@
+package OperacoesBancarias;
+
 
 public interface IConta {
 	
