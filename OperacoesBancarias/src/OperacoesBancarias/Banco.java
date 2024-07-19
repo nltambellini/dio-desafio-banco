@@ -22,5 +22,20 @@ public class Banco {
 	public void setContas(List<Conta> contas) {
 		this.contas = contas;
 	}
-
+	
+	// Método para imprimir os dados de todos os clientes e suas contas
+    public void imprimirDadosClientesEContas() {
+        if (contas != null) {
+            for (Conta conta : contas) {
+                Cliente cliente = conta.cliente;
+                System.out.println("Nome do Cliente: " + cliente.getNome());
+                System.out.println("CPF do Cliente: " + cliente.getCpf());
+                System.out.println("Número da Conta: " + conta.getNumero());
+                System.out.println("Saldo da Conta: " + conta.getSaldo());
+                System.out.println("-------------------------------------");
+            }
+        } else {
+            System.out.println("Não há contas cadastradas.");
+        }
+    }
 }
